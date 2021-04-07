@@ -2,13 +2,13 @@
 
 # CSSA-AÉI Elections
 
-From March 31st to April 3rd 2021, the Computer Science Student Association (CSSA) hosted its executive elections for the second time online. This year, we decided to build our own bilingual voting platform, as opposed to outsourcing this service to ElectionRunner for the second time. Since every student association has access to an official Mailing List detailing the information of their student body, we were confident that we could establish a legitimate voting platform where only CSSA members can vote.
+From March 31st to April 3rd 2021, the Computer Science Student Association (CSSA) hosted its executive elections for the second time online. This year, we decided to build our own bilingual voting platform, as opposed to outsourcing this service to ElectionRunner again. Since every student association has access to an official Mailing List detailing the information of their student body, we were confident that we could establish a legitimate voting platform where only CSSA members can vote.
 
-As a result of being the VP IT for the current academic year, I took the responsibility to design, implement, maintain & monitor the official elections platform for the CSSA.
+As a result of being the VP IT for the current academic year, I took the responsibility to design, implement, maintain & monitor the official elections platform for the CSSA 21-22 elections.
 
 ## Architecture Details
 
-- Split into two repositories: `elections-frontend` & `elections-backend`
+- Split into two repositories: [`elections-backend`](https://github.com/CSSA-AEI/elections-backend) & [`elections-frontend`](https://github.com/CSSA-AEI/elections-frontend)
 - Hosted through two Heroku Pipelines
 - Built using a 3-tier MERN Stack
   - MongoDB Atlas
@@ -16,13 +16,14 @@ As a result of being the VP IT for the current academic year, I took the respons
   - React TSX
   - Node JS
 - Written in `Typescript`
-- Monitored with Logentries & New Relic APM
-- Secured with Sqreen
+- Monitored with [Logentries](https://docs.logentries.com/docs/get-set-up) &[ New Relic APM](https://docs.newrelic.com/docs/apm/#:~:text=With%20New%20Relic's%20Application%20Performance,(non%2Dweb%20apps).)
+- Secured with [Sqreen](https://docs.sqreen.com/)
 - Bilingualized with `i18n`
 
 ## Typical User Flow of the Elections Platform
 
-The night before the voting period start: All +1000 CSSA Students receive an email providing their unique voting link, along with voting instructions. Example:
+* The night before the elections:
+*   All +1000 CSSA Students receive an email providing their unique voting link, along with voting instructions. For example:
 
 ```
 The CSSA Elections open March 31st at 10AM!
@@ -39,21 +40,18 @@ Thank you for voting!
 - Your CSSA exec team
 ```
 
-During the voting period (Users):
+* (Users) During the voting period: 
+  - Users navigate to their voting link provided, verify their identity, fill out the voting form, and submit their ballot. The time it takes to complete all of this is about 30 seconds.
+  - For the rest of the voting period, users who have already voted can review their submitted ballot, along with their time of vote.
 
-- Users navigate to their voting link provided, verify their identity, fill out the voting form, and submit their ballot. The time it takes to complete all of this is about 30 seconds.
-- For the rest of the voting period, users who have already voted can review their submitted ballot, along with their time of vote.
+* (Sys Admin) During the voting period:
+  - Monitor events, memory usage, response times, throughput, apdex scores, and other metrics using Heroku, Logentries, New Relic and Sqreen
+  - If needed, unblock IPs that have been blacklisted by Sqreen due to high API call rates (20 in under a minute)
 
-During the voting period (Sys Admin):
-
-- Monitor events, memory usage, response times, throughput, apdex scores, and other metrics using Heroku, Logentries, New Relic and Sqreen
-- If needed, unblock IPs that have been blacklisted by Sqreen due to high API call rates (20 in under a minute)
-
-After the voting period:
-
-- The Elections Officer (along with the System Administrator) review the Database entries and query the results
-- The Elections Officer announces the results to the current CSSA Executives and external candidates
-- The CSSA Executives release the election results to the CSSA student body
+* After the voting period:
+  - The Elections Officer (along with the System Administrator) review the Database entries and query the results
+  - The Elections Officer announces the results to the current CSSA Executives and external candidates
+  - The CSSA Executives release the election results to the CSSA student body
 
 ## Images
 
