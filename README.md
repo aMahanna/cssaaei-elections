@@ -2,7 +2,7 @@
 
 # CSSA-AÉI Elections
 
-From March 31st to April 3rd 2021, the Computer Science Student Association (CSSA) hosted its executive elections for the second time online. This year, we decided to build our own bilingual voting platform, as opposed to outsourcing this service to ElectionRunner again. Since every student association has access to an official Mailing List detailing the information of their student body, we were confident that we could establish a legitimate voting platform where only CSSA members can vote.
+From March 31st to April 3rd 2021, the [Computer Science Student Association](https://www.cssa-aei.ca/about/) (CSSA) hosted its executive elections for the second time online. This year, we decided to build our own bilingual voting platform, as opposed to outsourcing this service to ElectionRunner again. Since every student association has access to an official Mailing List detailing the information of their student body, we were confident that we could establish a legitimate voting platform where only CSSA members can vote.
 
 As a result of being the VP IT for the current academic year, I took the responsibility to design, implement, maintain & monitor the official elections platform for the CSSA 21-22 elections.
 
