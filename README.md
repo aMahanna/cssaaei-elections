@@ -23,7 +23,7 @@ As a result of being the VP IT for the current academic year, I took the respons
 ## Typical User Flow of the Elections Platform
 
 * The night before the elections:
-*   All +1000 CSSA Students receive an email providing their unique voting link, along with voting instructions. For example:
+  - All +1000 CSSA Students receive an email providing their unique voting link, along with voting instructions. For example:
 
 ```
 The CSSA Elections open March 31st at 10AM!
@@ -57,6 +57,6 @@ Thank you for voting!
 
 <img src="./assets/stack.png"  width="800"/>
 
-|                                                       |                                                    |                                                      |
+|                                                      |                                                    |                                                      |
 | :---------------------------------------------------: | :------------------------------------------------: | :--------------------------------------------------: |
-| <img src="./assets/landingPage_UI.png"  width="800"/> | <img src="./assets/voteForm_UI.png"  width="800"/> | <img src="./assets/voteBallot_UI.png"  width="800"/> |
+| <img src="./assets/landingPage_UI.png"  width="1000"/> | <img src="./assets/voteForm_UI.png"  width="800"/> | <img src="./assets/voteBallot_UI.png"  width="800"/> |
