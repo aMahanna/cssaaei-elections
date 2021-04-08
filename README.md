@@ -2,7 +2,9 @@
 
 # CSSA-AÉI Elections
 
-From March 31st to April 3rd 2021, the [Computer Science Student Association](https://www.cssa-aei.ca/about/) (CSSA) hosted its executive elections for the second time online. This year, we decided to build our own bilingual voting platform, as opposed to outsourcing this service to ElectionRunner again. Since every student association has access to an official Mailing List detailing the information of their student body, we were confident that we could establish a legitimate voting platform where only CSSA members can vote.
+From March 31st to April 3rd 2021, the [Computer Science Student Association](https://www.cssa-aei.ca/about/) (CSSA) hosted its executive elections for the second time online. This year, we decided to build our own bilingual voting platform, as opposed to outsourcing this service to ElectionRunner again. 
+
+Since every student association has access to an official Mailing List detailing the information of their student body, we were confident that we could establish a legitimate voting platform where only CSSA members can vote.
 
 As a result of being the VP IT for the current academic year, I took the responsibility to design, implement, maintain & monitor the official elections platform for the CSSA 21-22 elections.
 
@@ -12,9 +14,9 @@ As a result of being the VP IT for the current academic year, I took the respons
 - Hosted through two Heroku Pipelines
 - Built using a 3-tier MERN Stack
   - MongoDB Atlas
-  - Express JS
+  - Express
   - React TSX
-  - Node JS
+  - Node
 - Written in `Typescript`
 - Monitored with [Logentries](https://docs.logentries.com/docs/get-set-up) &[ New Relic APM](https://docs.newrelic.com/docs/apm/#:~:text=With%20New%20Relic's%20Application%20Performance,(non%2Dweb%20apps).)
 - Secured with [Sqreen](https://docs.sqreen.com/)
@@ -26,6 +28,8 @@ As a result of being the VP IT for the current academic year, I took the respons
   - All +1000 CSSA Students receive an email providing their unique voting link, along with voting instructions. For example:
 
 ```
+Hi ___,
+
 The CSSA Elections open March 31st at 10AM!
 
 If you would like to participate in the election (starting 10AM on March 31st), your unique voting link is:
@@ -46,14 +50,14 @@ Thank you for voting!
 
 * (Sys Admin) During the voting period:
   - Monitor events, memory usage, response times, throughput, apdex scores, and other metrics using Heroku, Logentries, New Relic and Sqreen
-  - If needed, unblock IPs that have been blacklisted by Sqreen due to high API call rates (20 in under a minute)
+  - If needed, unblock IPs that have been blacklisted by a custom Sqreen rule that monitors high API call rates
 
 * After the voting period:
   - The Elections Officer (along with the System Administrator) review the Database entries and query the results
   - The Elections Officer announces the results to the current CSSA Executives and external candidates
-  - The CSSA Executives release the election results to the CSSA student body
+  - The CSSA Executives release the election results to the CSSA student body & prepare for a transition
 
-## Images
+## Appendix
 
 <img src="./assets/stack.png"  width="800"/>
 
