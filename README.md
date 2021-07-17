@@ -1,6 +1,6 @@
 <a title="Realtime application protection" href="https://www.sqreen.com/?utm_source=badge"><img style="width:109px;height:36px" src="https://s3-eu-west-1.amazonaws.com/sqreen-assets/badges/20171107/sqreen-dark-badge.svg" alt="Sqreen | Runtime Application Protection" /></a>
 
-# CSSA-AÉI Elections
+# cssaaei-elections
 
 From March 31st to April 3rd 2021, the [Computer Science Student Association](https://www.cssa-aei.ca/about/) (CSSA) hosted its executive elections for the second time online. This year, we decided to build our own bilingual voting platform, as opposed to outsourcing this service to ElectionRunner again. 
 
